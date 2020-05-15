@@ -44,13 +44,28 @@
     </category>
 
     <category>
-        <pattern>Place a Order</pattern>
+        <pattern>PLACE A ORDER</pattern>
         <template>
            Ok Sir, Do you need menu ? <think> <set name ="topic">ORDER</set></think>
         </template>
     </category>
 
+    <category>
+        <pattern>^ ORDER *</pattern>
+        <template>
+            <srai>PLACE A ORDER</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ORDER *</pattern>
+        <template>
+            <srai>PLACE A ORDER</srai>
+        </template>
+    </category>
+
     <topic name ="ORDER"> 
+
         <category>
             <pattern> yes </pattern>
             <template>
@@ -110,7 +125,21 @@
             <pattern> track my order </pattern>
             <template>SIR PLEASE TELL ME YOUR ORDER NUMBER<think><set name="topic">TRACKING</set></think></template>
         </category>
-    
+
+        <category>
+            <pattern>^ TRACK ^</pattern>
+            <template>
+                <srai>TRACK MY ORDER </srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>TRACK *</pattern>
+            <template>
+                <srai>TRACK MY ORDER</srai>
+            </template>
+        </category>
+        
     <topic name="TRACKING">
         <category>
             <pattern> order number * </pattern>
@@ -148,6 +177,20 @@
         <category>
             <pattern> go to inquiry </pattern>
             <template>PLEASE TELL ME YOUR ORDER NUMBER AND NAME</template>
+        </category>
+
+        <category>
+            <pattern>^ INQUIRY ^</pattern>
+            <template>
+                <srai>GO TO inquiry</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>INQUIRY *</pattern>
+            <template>
+                <srai>GO TO INQUIRY</srai>
+            </template>
         </category>
 
         <category>
