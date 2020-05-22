@@ -122,14 +122,21 @@
     </topic>
 
         <category>
-            <pattern> track my order </pattern>
+            <pattern>TRACK MY ORDER</pattern>
             <template>SIR PLEASE TELL ME YOUR ORDER NUMBER<think><set name="topic">TRACKING</set></think></template>
         </category>
 
         <category>
             <pattern>^ TRACK ^</pattern>
             <template>
-                <srai>TRACK MY ORDER </srai>
+                <srai>TRACK MY ORDER</srai>
+            </template>
+        </category>
+
+        <category>
+            <pattern>* TRACK</pattern>
+            <template>
+                <srai>TRACK MY ORDER</srai>
             </template>
         </category>
 
