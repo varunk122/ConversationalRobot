@@ -6,7 +6,7 @@ This model is implemented to convert the audio messages of the user into text.
 
 ![ctc](https://user-images.githubusercontent.com/56124350/85904215-c2386d00-b825-11ea-99cf-b635187e99cc.png)
 
-# CTC_Model Ouput
+# CTC_Model Output
 
 ![Selection_050](https://user-images.githubusercontent.com/56124350/85904301-f7dd5600-b825-11ea-8646-ffc41a9d8438.png)
 
