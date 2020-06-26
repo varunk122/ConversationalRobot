@@ -88,7 +88,7 @@ class seq2seqmodel():
                                                                 return_sequences = True,
                                                                 return_state = True))(encoder_embeddings)
 
-    s = S0
+    s = last_hidden_state
     c = last_cell_state
     outputs = []
     
@@ -104,7 +104,7 @@ class seq2seqmodel():
 
       decoder = self.concatenator(inputs = [context , d_embeddings ])
       
-      decoder = Reshape(target_shape = (1 , 712))(decoder)
+      decoder = Reshape(target_shape = (1 , self.rnn_hidden_units * 2 + self.embedding_dims))(decoder)
       
       s, _ , c = self.post_lstm_layer(inputs = decoder , initial_state = [s ,c])
 
